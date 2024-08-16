@@ -1,0 +1,223 @@
+/* Overall styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: repeating-radial-gradient(#0c0a0a 80%, #2f312f 90%, #3f4549 90%);
+  background-size: 65px 65px;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Container for the buttons */
+.container-button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin: 5px;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Section styling with translucent black background */
+section {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+/* Skill bar styling */
+.skill {
+  margin: 15px 0;
+}
+
+.skill h3 {
+  margin: 0;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  height: 20px;
+  width: 100%;
+}
+
+.skill-fill {
+  background: dodgerblue;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+/* Certificate section styling with translucent black background */
+.certificate-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.certificate-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.certificate-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.certificate-card p {
+  margin: 10px 0 0;
+}
+
+/* Contact section styles with translucent black background */
+#contact {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+#contact h2 {
+  margin-bottom: 15px;
+}
+
+#contact p {
+  margin: 10px 0;
+  color: white;
+}
+
+#contact i {
+  margin-right: 8px;
+  color: white;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Lightbox styling */
+.lb-data-title {
+  color: white;
+}
+
+/* Resume Modal */
+#resume-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#resume-modal iframe {
+  width: 100%;
+  height: 600px;
+}
+
+#resume-modal button {
+  display: block;
+  margin: 20px auto;
+  background: #183153;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#resume-modal button:hover {
+  background: #ffd401;
+  color: #183153;
+}

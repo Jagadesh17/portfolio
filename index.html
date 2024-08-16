@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Portfolio</h1>
+        <div class="container-button">
+            <button onclick="scrollToSection('about')"><span>About</span></button>
+            <button onclick="scrollToSection('achievements')"><span>Achievements</span></button>
+            <button onclick="scrollToSection('projects')"><span>Projects</span></button>
+            <button onclick="scrollToSection('certificates')"><span>Certificates</span></button>
+            <button onclick="openResume()"><span>Resume</span></button>
+            <button onclick="scrollToSection('contact')"><span>Contact</span></button>
+        </div>
+    </header>
+
+    <!-- Sections -->
+    <section id="about">
+        <h2>About</h2>
+        <p>I am an inspired college student who is actively pursuing academic and personal development. I may explore new concepts, develop my abilities, and make connections with like-minded people during this time of discovery. I'm currently refining my data analysis skills with the goal of becoming a skilled data analyst. Equipped with an advanced understanding of data visualization, as well as fluency in many languages, I am eager to apply my analytical abilities to promote data-driven decision-making and creativity in the workplace.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <h3>HTML</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>C</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>C++</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Python</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Java</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>SQL</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Data Analytics</h3>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+    </section>
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <!-- Achievements content here -->
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Projects content here -->
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificate-container">
+            <div class="certificate-card">
+                <a href="https://drive.google.com/file/d/1FGg80HAaLNSkmLC5FVn_x3N2xs55Zkhp/view?usp=drive_link" data-lightbox="certificates" data-title="Data Analysis with python- python-IBM">
+                    <img src="data analysis with python-IBM.jpg" alt="IBM certificate">
+                </a>
+                <p>Data Analysis</p>
+            </div>
+            <div class="certificate-card">
+                <a href="https://drive.google.com/file/d/1aBtNK8agurY74r_8vEbLEV2PBsFxhuvb/view?usp=drive_link" data-lightbox="certificates" data-title="Oracle">
+                    <img src="Generative_AI.jpg" alt="Gen AI certificate">
+                </a>
+                <p>Generative AI - Oracle</p>
+            </div>
+            <!-- Add more certificate cards as needed -->
+        </div>
+    </section>
+
+    
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:r.jagadesh17114@gmail.com">r.jagadesh17114@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+91 7305457074">+91 7305457074</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/rjd11" target="_blank">LinkedIn</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/Jagadesh17" target="_blank">GitHub</a></p>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" style="display: none;">
+        <iframe src="your_resume.pdf" frameborder="0"></iframe>
+        <button onclick="closeResume()">Close</button>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openResume() {
+            window.open('https://drive.google.com/file/d/1XcnGEPO9XOIhOfUbcGnzW73vZBgUm1F7/view?usp=sharing', '_blank');
+        }
+
+        function closeResume() {
+            document.getElementById('resume-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
